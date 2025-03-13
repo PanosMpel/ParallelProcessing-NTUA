@@ -1,0 +1,29 @@
+mpi_jacobi.c: In function 'main':
+mpi_jacobi.c:19:76: warning: unused variable 'conv_time' [-Wunused-variable]
+     double ttotal=0,tcomp=0,tcomm=0,tconv=0,total_time,comp_time,comm_time,conv_time;
+                                                                            ^
+mpi_jacobi.c:19:37: warning: unused variable 'tconv' [-Wunused-variable]
+     double ttotal=0,tcomp=0,tcomm=0,tconv=0,total_time,comp_time,comm_time,conv_time;
+                                     ^
+mpi_jacobi.c:18:48: warning: unused variable 'tsf' [-Wunused-variable]
+     struct timeval tts,ttf,tcs,tcf,tes,tef,tss,tsf;   //Timers: total-> tts,ttf, computation -> tcs,tcf
+                                                ^
+mpi_jacobi.c:18:44: warning: unused variable 'tss' [-Wunused-variable]
+     struct timeval tts,ttf,tcs,tcf,tes,tef,tss,tsf;   //Timers: total-> tts,ttf, computation -> tcs,tcf
+                                            ^
+mpi_jacobi.c:16:12: warning: variable 'omega' set but not used [-Wunused-but-set-variable]
+     double omega;    //relaxation factor - useless for Jacobi
+            ^
+mpi_jacobi.c:14:28: warning: unused variable 'converged' [-Wunused-variable]
+     int global_converged=0,converged=0; //flags for convergence, global and per process
+                            ^
+mpi_jacobi.c:14:9: warning: unused variable 'global_converged' [-Wunused-variable]
+     int global_converged=0,converged=0; //flags for convergence, global and per process
+         ^
+mpi_jacobi.c:405:5: warning: 'scattercounts' may be used uninitialized in this function [-Wmaybe-uninitialized]
+     MPI_Gatherv(&u_current[1][1], 1, local_block, &U[0][0], scattercounts, scatteroffset, global_block, 0, CART_COMM);
+     ^
+mpi_jacobi.c:405:5: warning: 'scatteroffset' may be used uninitialized in this function [-Wmaybe-uninitialized]
+mpi_jacobi.c:154:9: warning: 'U' may be used uninitialized in this function [-Wmaybe-uninitialized]
+         free2d(U);
+         ^
